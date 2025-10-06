@@ -14,9 +14,12 @@ Functions from the "GameManager" class are called often by other scripts. For ex
 
 ## Game Description
 - Title: 2DGame360
+
 -Controls: WASD, Left Click, Arrow Keys
+
 - Objective: Reach a score of 2000
 
 ## Repository Stats
 - Total Commits: 14
+
 - Development Time: 19 Hours
