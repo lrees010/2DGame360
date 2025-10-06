@@ -30,17 +30,18 @@ public class Enemy : MonoBehaviour
     {
         if (player)
         {
-            if (GameManager.Instance.score > 1000)
+            if (GameManager.Instance.score > 99)
                 moveSpeed = 3f;
-            if (GameManager.Instance.score > 2000)
+            if (GameManager.Instance.score > 1999)
                 moveSpeed = 4f;
             float distance = Vector2.Distance(transform.position, player.position);
 
             if (distance <= detectionRange)
             {
                 Vector2 direction = (player.position - transform.position).normalized;
-               // rb.linearVelocity = direction * moveSpeed;
+               
                rb.AddForce(direction * moveSpeed);
+                // rb.linearVelocity = direction * moveSpeed;
             }
             else
             {
