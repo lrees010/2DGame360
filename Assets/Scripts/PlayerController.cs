@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -62,10 +63,8 @@ public class PlayerController : MonoBehaviour
 
     private void FireBullet()
     {
-        if (GameManager.Instance.score > 499 && GameManager.Instance.score < 999)
-            fireRate = 0.33f;
-        if (GameManager.Instance.score > 999)
-            fireRate = 0.11f;
+        fireRate = 100f / ((GameManager.Instance.score/10f)+100f);
+
 
         if (bulletPrefab && firePoint)
         {

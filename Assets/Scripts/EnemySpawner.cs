@@ -16,12 +16,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             nextSpawnTime = Time.time + spawnRate;
         }
-        if (GameManager.Instance.score > 400 && GameManager.Instance.score < 900)
-            spawnRate = 1.5f;
-        if (GameManager.Instance.score > 900 && GameManager.Instance.score < 1400)
-            spawnRate = 1.0f;
-        if (GameManager.Instance.score > 1400 && GameManager.Instance.score < 2000)
-            spawnRate = 0.5f;
+        spawnRate = 10f/(GameManager.Instance.score/50f);
     }
 
     private void SpawnEnemy()
