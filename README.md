@@ -1,6 +1,8 @@
 # 2DGame360
 A demonstration for Singleton pattern
 
+# Task 2: Singleton Implementation
+
 ## Student Info
 - Name: Lysander Reese
 - ID: 01232389
@@ -18,5 +20,5 @@ Functions from the "GameManager" class are called often by other scripts. For ex
 - Objective: Reach a score of 2000
 
 ## Repository Stats
-- Total Commits: 17
+- Total Commits: 18
 - Development Time: 19 Hours
