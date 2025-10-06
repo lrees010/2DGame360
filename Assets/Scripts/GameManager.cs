@@ -35,20 +35,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded -= OnSceneLoaded; //unsubscribe
     }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded; //subscribe
+    }
+
+
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        RefreshUIReferences();
-        UpdateUI();
+        RefreshUIReferences(); //refresh ui upon reloading the scene, score and lives
+
+        UpdateUI(); //set up label text
 
     }
 
@@ -62,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void RefreshUIReferences()
     {
         
-       scoreText = GameObject.Find("Score")?.GetComponent<Text>();
+       scoreText = GameObject.Find("Score")?.GetComponent<Text>(); //scores not scorestext
        livesText = GameObject.Find("Lives")?.GetComponent<Text>();
        enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<Text>();
        gameOverPanel = GameObject.Find("GameEndPanel");
