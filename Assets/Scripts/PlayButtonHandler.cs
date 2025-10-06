@@ -17,7 +17,7 @@ public class PlayButtonHandler : MonoBehaviour
             // Clear any existing listeners to be safe
             playButton.onClick.RemoveAllListeners();
 
-            // Add a new listener that calls the RestartGame method on the GameManager singleton
+            // Add a new listener that calls the Clicky method
             playButton.onClick.AddListener(Clicky);
         }
     }
