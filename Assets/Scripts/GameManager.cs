@@ -69,9 +69,9 @@ public class GameManager : MonoBehaviour
        livesText = GameObject.Find("Lives")?.GetComponent<Text>();
        enemiesKilledText = GameObject.Find("EnemiesKilled")?.GetComponent<Text>();
        gameOverPanel = GameObject.Find("GameEndPanel");
-        if (gameOverPanel != null)
+        if (gameOverPanel != null) //if panel exists
         {
-            gameOverPanel.SetActive(false);
+            gameOverPanel.SetActive(false); //make inactive
         }
 
     }
@@ -148,27 +148,5 @@ public class GameManager : MonoBehaviour
        
     }
 
-    private void DestroyAllGameObjects()
-    {
-        // Destroy all enemies
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            Destroy(enemy);
-        }
 
-        // Destroy all bullets
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-        foreach (GameObject bullet in bullets)
-        {
-            Destroy(bullet);
-        }
-
-        // Destroy all collectibles
-        GameObject[] collectibles = GameObject.FindGameObjectsWithTag("Collectible");
-        foreach (GameObject collectible in collectibles)
-        {
-            Destroy(collectible);
-        }
-    }
 }
