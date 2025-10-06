@@ -25,6 +25,7 @@ public class PlayButtonHandler : MonoBehaviour
     void Clicky()
     {
         Debug.Log("click");
+        GameManager.Instance.RestartGame();
         SceneManager.LoadScene("delete");
     }
 }

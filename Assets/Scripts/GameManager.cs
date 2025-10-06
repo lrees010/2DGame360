@@ -80,6 +80,11 @@ public class GameManager : MonoBehaviour
         score += points;
         Debug.Log($"Score increased by {points}. Total: {score}");
         UpdateUI();
+
+        if (score>1999)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 
 
